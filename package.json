@@ -1,0 +1,26 @@
+{
+  "name": "nbpushnotification",
+  "version": "0.0.0",
+  "description": "Wrapper for cordova phonegap-plugin-push",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/halas/nbpushnotification.git"
+  },
+  "keywords": [
+    "angular",
+    "cordova",
+    "plugin",
+    "push"
+  ],
+  "author": "Michał Hałas <info@michalhalas.pl>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/halas/nbpushnotification/issues"
+  },
+  "homepage": "https://gitlab.com/halas/nbpushnotification#README",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-stripcomments": "^0.5.0"
+  }
+}
