@@ -1,29 +1,10 @@
-/* global nbPushNotification, angular */
-
-/**
- * nbnbPushNotification - service wrapper for nbPushNotification plugin
- */
+/* global nbPushNotificationService, angular, PushNotification */
 
 'use strict';
 
 /**
- * @param {string} message
- * @returns {nbPushNotificationInvalidArgumentException}
- */
-var nbPushNotificationInvalidArgumentException = function(message) {
-  this.message = message;
-  this.name = 'nbPushNotificationInvalidArgumentException';
-};
-
-/**
- * @returns {nbPushNotificationPluginNotFoundException}
- */
-var nbPushNotificationPluginNotFoundException = function() {
-  this.message = 'Plugin nbPushNotification was not found!';
-  this.name = 'nbPushNotificationPluginNotFoundException';
-};
-
-/**
+ * Wrapper for cordova phonegap-plugin-push
+ * 
  * @param {Object} initData
  * @returns {nbPushNotificationService}
  */
@@ -39,11 +20,11 @@ var nbPushNotificationService = function(initData) {
   /**
    * Returns true if plugin nbPushNotification exists.
    */
-  scope.pluginExists = window['nbPushNotification'] != undefined;
+  scope.pluginExists = window['PushNotification'] != undefined;
   
   var push = scope.pluginExists ? PushNotification.init(initData) : null,
   reinit = function() {
-    scope.pluginExists = window['nbPushNotification'] != undefined;
+    scope.pluginExists = window['PushNotification'] != undefined;
     push = scope.pluginExists && push === null ? PushNotification.init(initData) : null;
   };
   
