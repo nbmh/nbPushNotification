@@ -1,6 +1,6 @@
 {
   "name": "nbpushnotification",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Wrapper for cordova phonegap-plugin-push",
   "repository": {
     "type": "git",
